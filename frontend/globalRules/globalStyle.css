@@ -28,6 +28,7 @@
 
 img {
     width: 100%;
+    display: inline-block;
 }
 
 ul {
@@ -39,8 +40,10 @@ li {
 }
 
 a {
+    display: inline-block;
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
 }
 
 body {

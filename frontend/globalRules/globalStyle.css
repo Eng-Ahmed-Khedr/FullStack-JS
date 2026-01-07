@@ -54,6 +54,7 @@ button {
     position: relative;
     transition: 0.3s;
     cursor: pointer;
+    z-index: 1;
 }
 
 button::before {
@@ -64,6 +65,7 @@ button::before {
     bottom: 0;
     right: 0;
     transition: 0.3s;
+    z-index: -1;
 }
 
 button:hover::before {

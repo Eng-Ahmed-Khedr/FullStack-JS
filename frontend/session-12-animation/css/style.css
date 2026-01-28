@@ -1,0 +1,194 @@
+/* start rules */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    display: inline-block;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    text-decoration: none;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+body {
+    font-family: "Poppins-Regular", "Poppins-Bold", "Poppins-SemiBold";
+}
+
+button {
+    position: relative;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 1;
+}
+
+button::before {
+    content: "";
+    width: 100%;
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: 0.3s;
+    z-index: -1;
+}
+
+button:hover::before {
+    height: 100%;
+}
+
+/* end rules */
+body {
+    position: relative;
+    width: 800px;
+    height: 800px;
+
+}
+
+.parent {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    left:25%;
+    bottom: 25%;
+    /* background-color: burlywood; */
+}
+
+img {
+    width: 150px;
+    height: 150px;
+}
+
+@keyframes animationblue {
+    0% {
+        right: 0%;
+        bottom: 10%;
+    }
+
+    25% {
+        right: 50%;
+        bottom: 70%;
+    }
+
+    50% {
+        right: 80%;
+        bottom: 80%;
+    }
+
+    75% {
+        right: 80%;
+        bottom: 0%;
+    }
+
+    100% {
+        right: 0%;
+        bottom: 10%;
+    }
+}
+
+@keyframes animationpurple {
+
+    0% {
+        right: 50%;
+        bottom: 70%;
+    }
+
+    25% {
+        right: 80%;
+        bottom: 80%;
+    }
+
+    50% {
+        right: 80%;
+        bottom: 0%;
+    }
+
+    75% {
+        right: 0%;
+        bottom: 10%;
+    }
+
+    100% {
+        right: 50%;
+        bottom: 70%;
+    }
+}
+
+@keyframes animationred {
+
+    0% {
+        right: 80%;
+        bottom: 0%;
+    }
+
+    25% {
+        right: 0%;
+        bottom: 10%;
+    }
+
+    50% {
+        right: 50%;
+        bottom: 70%;
+    }
+
+    75% {
+        right: 80%;
+        bottom: 80%;
+    }
+
+    100% {
+        right: 80%;
+        bottom: 0%;
+    }
+}
+
+.parent .front img {
+    position: absolute;
+    /* top: 25%;
+    left: 25%; */
+    width: 400px;
+    height: 400px;
+    z-index: 1;
+}
+
+.parent .blue {
+    position: absolute;
+    /* opacity: 0;
+    visibility: hidden; */
+    animation-name: animationblue;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.parent .purple {
+    position: absolute;
+    /* opacity: 0;
+    visibility: hidden; */
+    animation-name: animationpurple;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.parent .red {
+    position: absolute;
+    /* opacity: 0;
+    visibility: hidden; */
+    animation-name: animationred;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}

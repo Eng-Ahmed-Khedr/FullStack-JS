@@ -1,0 +1,37 @@
+.save {
+    background-color: #41896c;
+    cursor: pointer;
+    border: none;
+}
+
+.update {
+    background-color: rgb(255, 242, 0);
+}
+
+
+#todoContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#todoContainer .todoBox {
+    margin: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
+
+#todoContainer .todoBox button {
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#todoContainer .todoBox .delete {
+    background-color: red;
+}
+
+#todoContainer .todoBox .edit {
+    background-color: rgb(255, 242, 0);
+}

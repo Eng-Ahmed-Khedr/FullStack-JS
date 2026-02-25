@@ -1,0 +1,17 @@
+body[darkModing="false"] {
+    background-color: #FFFFFF;
+}
+
+body[darkModing="true"] {
+    background-color: #000000;
+}
+
+.todoitem {
+    padding: 5px 10px;
+}
+
+.save {
+    background-color: #41896c;
+    cursor: pointer;
+    border: none;
+}

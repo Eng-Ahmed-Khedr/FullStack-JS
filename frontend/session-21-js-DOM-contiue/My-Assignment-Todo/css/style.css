@@ -1,0 +1,42 @@
+.inputData,
+.inputBtn {
+    padding: 5px 10px;
+}
+
+.inputBtn {
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+}
+
+.todoContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.todoBox {
+    margin: 20px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    width: fit-content;
+    padding-left: 10px;
+}
+
+.todoBox .update,
+.todoBox .delete {
+    color: white;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.update {
+    background-color: rgb(243, 128, 28);
+}
+
+.todoBox .delete {
+    background-color: rgb(243, 28, 28);
+}

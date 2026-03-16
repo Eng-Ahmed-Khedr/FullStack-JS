@@ -5,12 +5,20 @@ const inputBtn = document.getElementById("inputBtn");
 const todoContainer = document.getElementById("todoContainer");
 
 function saveTodo() {
+    let todoObject = {
+        name: "",
+        checked: false
+    }
+
     if (inputBtn.innerText == "Update") {
-        todoArray[todoArrayIndex] = inputField.value;
+        todoArray[todoArrayIndex].name = inputField.value;
         inputBtn.innerText = "Save";
-        inputBtn.classList.remove("update");
+        // inputBtn.classList.remove("update");
+        inputBtn.classList.remove("bg-warning");
+        inputBtn.classList.add("bg-success");
     } else {
-        todoArray.push(inputField.value);
+        todoObject.name = inputField.value;
+        todoArray.push(todoObject);
     }
     inputField.value = "";
     readTodo();
@@ -20,18 +28,38 @@ function readTodo() {
     todoContainer.innerHTML = "";
     todoArray.forEach((element, index) => {
         todoContainer.innerHTML +=
-            `<div class="todoBox">
-                <h2>${element}</h2>
-                <button id="updateBtn" class="update" onclick="updatetodo(${index})">Update</button>
-                <button id="deleteBtn" class="delete" onclick="deleteTodo(${index})">delete</button>
-            </div>`;
+            `<div class="todoBox bg-black text-white border-0 rounded-2 p-3">
+        <h2>${element["name"]}</h2>
+        <button id="checkedBtn" class="check btn bg-success text-white" onclick="checkTodo(${index})">check</button>
+        <button id="updateBtn" class="update btn bg-warning text-white" onclick="updatetodo(${index})">Update</button>
+        <button id="deleteBtn" class="delete btn bg-danger text-white" onclick="deleteTodo(${index})">delete</button>
+        </div>`;
     })
+}
+
+
+function checkTodo(index) {
+    const checkedBtn = document.getElementById("checkedBtn");
+    if (checkedBtn.innerText == "check") {
+        checkedBtn.innerText = "checked";
+        checkedBtn.classList.remove("bg-success");
+        checkedBtn.classList.add("bg-secondary");
+        todoArray[index].checked = true;
+    } else {
+        checkedBtn.innerText = "check";
+        checkedBtn.classList.remove("checked");
+        checkedBtn.classList.remove("bg-secondary");
+        checkedBtn.classList.add("bg-success");
+        todoArray[index].checked = false;
+    }
+    return;
 }
 
 function updatetodo(index) {
     inputBtn.innerText = "Update";
-    inputBtn.classList.add("update");
-    inputField.value = todoArray[index];
+    inputBtn.classList.remove("bg-success");
+    inputBtn.classList.add("bg-warning");
+    inputField.value = todoArray[index].name;
     todoArrayIndex = index;
 }
 

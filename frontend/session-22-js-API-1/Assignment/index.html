@@ -6,16 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Assignment</title>
 </head>
 
 <body>
 
-    <input type="text" name="inputData" class="inputData" id="inputData">
-    <button type="submit" class="inputBtn" id="inputBtn" onclick="saveTodo()">Save</button>
+    <form action="#" class="mx-3 my-3">
+        <input type="text" name="inputData" class="w-25" id="inputData">
+        <button type="submit" class="bg-success btn text-white" id="inputBtn" onclick="saveTodo()">Save</button>
+    </form>
 
-    <div id="todoContainer">
-
+    <div id="todoContainer" class="my-3 d-flex flex-wrap">
+        
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"

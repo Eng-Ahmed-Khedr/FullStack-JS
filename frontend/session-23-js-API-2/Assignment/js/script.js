@@ -5,6 +5,13 @@ const inputBtn = document.getElementById("inputBtn");
 const todoContainer = document.getElementById("todoContainer");
 const addForm = document.getElementById("addForm")
 
+// localStorage.clear();
+
+if (localStorage.getItem("todoArray")) {
+    console.log(JSON.parse(localStorage.getItem("todoArray")));
+    // console.log(todoArray)
+    readTodo();
+}
 
 function saveTodo() {
     let todoObject = {
@@ -23,6 +30,7 @@ function saveTodo() {
     }
     inputField.value = "";
     readTodo();
+    // console.log(todoArray)
 }
 
 function readTodo() {
@@ -36,6 +44,8 @@ function readTodo() {
         <button id="deleteBtn" class="delete btn bg-danger text-white" onclick="deleteTodo(${index})">delete</button>
         </div>`;
     })
+    localStorage.setItem("todoArray", JSON.stringify(todoArray));
+    return;
 }
 
 
@@ -53,6 +63,7 @@ function checkTodo(index) {
         checkedBtn.classList.add("bg-success");
         todoArray[index].checked = false;
     }
+    readTodo();
     return;
 }
 

@@ -1,0 +1,38 @@
+.navbar {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 95%;
+    border-radius: 5px;
+}
+
+.navbar-brand {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.navbar-brand span {
+    color: var(--light-green);
+    font-weight: 700;
+}
+
+
+.navbar .container-fluid .collapse .navbar-nav .nav-item .nav-link {
+    transition: 0.3s;
+    color: #051441;
+    padding: 20px 10px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+.navbar .container-fluid .collapse .navbar-nav .nav-item .nav-link:hover {
+    color: #30e3ca;
+}
+
+.navbar .container-fluid .collapse .navbar-nav .nav-item .nav-link.btn {
+    color: #FFFFFF;
+    background-color: var(--light-green);
+    padding: 8px 12px;
+}
